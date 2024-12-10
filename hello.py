@@ -5,5 +5,5 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello, World!'
-
+    user = request.args.get('user')
+    return 'Hello, World!' + user
