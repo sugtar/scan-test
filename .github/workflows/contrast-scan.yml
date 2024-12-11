@@ -46,7 +46,7 @@ jobs:
         apiKey: ${{ secrets.CONTRAST_API_KEY }}
         orgId: ${{ secrets.CONTRAST_ORGANIZATION_ID }}
         authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
-        apiUrl: https://apptwo.contrastsecurity.com/
+        apiUrl: https://apptwo.contrastsecurity.com
     #Upload the results to GitHub
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v3
