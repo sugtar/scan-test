@@ -40,15 +40,10 @@ jobs:
     # ...
     # Scan Artifact
     - name: Contrast Scan Action
-      uses: Contrast-Security-OSS/contrastscan-action@v3.0.2
+      uses: Contrast-Security-OSS/contrast-local-scan-action@v1.0.0
       with:
-        artifact: app.zip # replace this path with the path to your built artifact
+        apiURL: ${{ secrets.CONTRAST__API__URL }}
+        apiUserName: ${{ secrets.CONTRAST__API__USER_NAME }}
         apiKey: ${{ secrets.CONTRAST_API_KEY }}
-        orgId: ${{ secrets.CONTRAST_ORGANIZATION_ID }}
-        authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
-        apiUrl: https://apptwo.contrastsecurity.com
-    #Upload the results to GitHub
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v3
-      with:
-        sarif_file: results.sarif # The file name must be 'results.sarif', as this is what the Github Action will output
+        apiOrgId: ${{ secrets.CONTRAST_ORGANIZATION_ID }}
+        apiServiceKey: ${{ secrets.CONTRAST__API__SERVICE_KEY }}
