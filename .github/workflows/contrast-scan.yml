@@ -13,6 +13,7 @@
 # The required secrets are CONTRAST_API_KEY, CONTRAST_ORGANIZATION_ID and CONTRAST_AUTH_HEADER.
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
