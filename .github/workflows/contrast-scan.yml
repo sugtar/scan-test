@@ -40,7 +40,7 @@ jobs:
     # ...
     # Scan Artifact
     - name: Contrast Scan Action
-      uses: Contrast-Security-OSS/contrast-local-scan-action@vmain
+      uses: Contrast-Security-OSS/contrast-local-scan-action@main
       with:
         apiURL: ${{ secrets.CONTRAST__API__URL }}
         apiUserName: ${{ secrets.CONTRAST__API__USER_NAME }}
