@@ -47,3 +47,4 @@ jobs:
         apiKey: ${{ secrets.CONTRAST_API_KEY }}
         apiOrgId: ${{ secrets.CONTRAST_ORGANIZATION_ID }}
         apiServiceKey: ${{ secrets.CONTRAST__API__SERVICE_KEY }}
+        resourceGroup: TaroScanCustomResourceGroup
