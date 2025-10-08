@@ -11,3 +11,7 @@ def hello():
 @app.route('/foo')
 def foo():
     return 'foo'
+
+@app.route('/bar')
+def foo():
+    return 'bar'
